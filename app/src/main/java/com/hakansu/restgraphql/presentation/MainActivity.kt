@@ -1,7 +1,8 @@
-package com.hakansu.restgraphql
+package com.hakansu.restgraphql.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.hakansu.restgraphql.R
 
 class MainActivity : AppCompatActivity() {
 
