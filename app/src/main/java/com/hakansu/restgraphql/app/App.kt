@@ -1,4 +1,4 @@
-package com.hakansu.restgraphql
+package com.hakansu.restgraphql.app
 
 import android.app.Application
 
