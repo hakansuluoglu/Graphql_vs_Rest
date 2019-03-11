@@ -1,20 +1,21 @@
 package com.hakansu.restgraphql.app.di.module
 
 import androidx.annotation.NonNull
+import com.apollographql.apollo.ApolloClient
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.hakansu.restgraphql.BuildConfig
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
+import okhttp3.Request
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
-import com.apollographql.apollo.ApolloClient
 
 @Module
-public class NetworkModule {
+class NetworkModule {
 
     @Provides
     @Singleton
@@ -27,7 +28,16 @@ public class NetworkModule {
     @Provides
     @Singleton
     internal fun provideOkhttpClient(): OkHttpClient {
-        return OkHttpClient().newBuilder().build()
+        val httpClient = OkHttpClient.Builder()
+        httpClient.addInterceptor { chain ->
+            val original = chain.request()
+            val requestBuilder: Request.Builder
+            requestBuilder = original.newBuilder()
+                .addHeader("authorization","23452563456")
+            val request = requestBuilder.build()
+            chain.proceed(request)
+        }
+        return httpClient.build()
     }
 
     @Provides

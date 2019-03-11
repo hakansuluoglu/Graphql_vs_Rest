@@ -1,3 +1,3 @@
-package com.hakansu.restgraphql.presentation.both
+package com.hakansu.restgraphql.presentation.rest
 
 class RestFragment

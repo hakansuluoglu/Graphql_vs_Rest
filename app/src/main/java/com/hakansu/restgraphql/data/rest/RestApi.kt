@@ -1,4 +1,4 @@
-package com.hakansu.restgraphql.data.api
+package com.hakansu.restgraphql.data.rest
 
 import io.reactivex.Single
 import retrofit2.http.GET

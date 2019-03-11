@@ -4,10 +4,7 @@ import android.content.Context
 import com.hakansu.restgraphql.app.App
 import com.hakansu.restgraphql.app.di.module.ApplicationModule
 import com.hakansu.restgraphql.app.di.module.NetworkModule
-import com.hakansu.restgraphql.data.DataFactory
-import com.hakansu.restgraphql.data.api.GraphqlClient
-import com.hakansu.restgraphql.data.api.RestClient
-import com.hakansu.restgraphql.domain.Repository
+import com.hakansu.restgraphql.presentation.graphql.GraphqlFragment
 import dagger.Component
 import javax.inject.Singleton
 
@@ -17,15 +14,8 @@ interface ApplicationComponent {
 
     fun inject(app: App)
 
-    fun repository(): Repository
-
     fun context(): Context
 
-    fun dataFactory(): DataFactory
-
-    fun restClient(): RestClient
-
-    fun graphlClient(): GraphqlClient
-
+     fun inject(graphqlFragment: GraphqlFragment)
 
 }

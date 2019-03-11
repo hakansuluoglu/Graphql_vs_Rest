@@ -1,3 +1,5 @@
 package com.hakansu.restgraphql.presentation.base
 
-class BaseFragment
+import androidx.fragment.app.Fragment
+
+open class BaseFragment :Fragment()
