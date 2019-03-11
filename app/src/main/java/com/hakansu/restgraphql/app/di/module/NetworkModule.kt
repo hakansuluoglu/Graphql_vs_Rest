@@ -33,7 +33,7 @@ class NetworkModule {
             val original = chain.request()
             val requestBuilder: Request.Builder
             requestBuilder = original.newBuilder()
-                .addHeader("authorization","23452563456")
+                .addHeader("Authorization","Bearer 89d1e1af7ef09d5c5e5f8ab1d4c678d986418dab")
             val request = requestBuilder.build()
             chain.proceed(request)
         }

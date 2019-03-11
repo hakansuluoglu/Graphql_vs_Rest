@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import butterknife.ButterKnife
 import com.hakansu.restgraphql.R
+import com.hakansu.restgraphql.app.App
 import javax.inject.Inject
 
 open class GraphqlFragment : Fragment(){
@@ -18,6 +19,11 @@ open class GraphqlFragment : Fragment(){
          fun newInstance(): GraphqlFragment {
             return GraphqlFragment()
         }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        App.applicationComponent.inject(this)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
