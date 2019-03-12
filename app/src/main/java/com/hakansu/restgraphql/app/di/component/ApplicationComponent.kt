@@ -3,6 +3,7 @@ package com.hakansu.restgraphql.app.di.component
 import com.hakansu.restgraphql.app.di.module.ApplicationModule
 import com.hakansu.restgraphql.app.di.module.NetworkModule
 import com.hakansu.restgraphql.presentation.graphql.GraphqlFragment
+import com.hakansu.restgraphql.presentation.rest.RestFragment
 import dagger.Component
 import javax.inject.Singleton
 
@@ -11,5 +12,6 @@ import javax.inject.Singleton
 interface ApplicationComponent {
 
     fun inject(graphqlFragment: GraphqlFragment)
+    fun inject(restFragment: RestFragment)
 
 }

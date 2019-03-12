@@ -24,5 +24,4 @@ class ApplicationModule(private val application: App) {
     internal fun Repository(dataRepository: DataRepository): Repository {
         return dataRepository
     }
-
 }

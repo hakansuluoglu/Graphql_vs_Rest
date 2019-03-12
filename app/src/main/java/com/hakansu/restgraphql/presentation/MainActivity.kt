@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.hakansu.restgraphql.R
 import com.hakansu.restgraphql.presentation.graphql.GraphqlFragment
+import com.hakansu.restgraphql.presentation.rest.RestFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +14,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val graphqlFragment = GraphqlFragment.newInstance()
-        putFragment(graphqlFragment, graphqlFragment.javaClass.simpleName, false)
+        val restFragment = RestFragment.newInstance()
+        //putFragment(graphqlFragment, graphqlFragment.javaClass.simpleName, false)
+        putFragment(restFragment, restFragment.javaClass.simpleName, false)
     }
 
 
