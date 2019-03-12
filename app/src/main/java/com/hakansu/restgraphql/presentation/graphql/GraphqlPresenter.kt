@@ -3,7 +3,7 @@ package com.hakansu.restgraphql.presentation.graphql
 import android.util.Log
 import com.apollographql.apollo.api.Response
 import com.hakansu.restgraphql.GitReposQuery
-import com.hakansu.restgraphql.domain.Repository
+import com.hakansu.restgraphql.data.Repository
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import javax.inject.Inject

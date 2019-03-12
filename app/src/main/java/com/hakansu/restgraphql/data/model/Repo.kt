@@ -1,9 +1,8 @@
-package com.hakansu.restgraphql.domain.model
+package com.hakansu.restgraphql.data.model
 
 import com.google.gson.annotations.SerializedName
 
-class Repository {
-
+class Repo {
 
     @SerializedName("description")
     var description: String? = null

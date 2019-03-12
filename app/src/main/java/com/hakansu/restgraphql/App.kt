@@ -1,9 +1,7 @@
-package com.hakansu.restgraphql.app
+package com.hakansu.restgraphql
 
 import android.app.Application
-import com.hakansu.restgraphql.app.di.component.ApplicationComponent
-import com.hakansu.restgraphql.app.di.component.DaggerApplicationComponent
-import com.hakansu.restgraphql.app.di.module.ApplicationModule
+import com.hakansu.restgraphql.di.DaggerApplicationComponent
 
 class App : Application() {
 

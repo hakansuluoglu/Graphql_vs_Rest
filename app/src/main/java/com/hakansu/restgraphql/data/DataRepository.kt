@@ -4,8 +4,7 @@ import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.rx2.Rx2Apollo
 import com.hakansu.restgraphql.GitReposQuery
-import com.hakansu.restgraphql.data.rest.RestClient
-import com.hakansu.restgraphql.domain.Repository
+import com.hakansu.restgraphql.data.model.Repo
 import io.reactivex.Observable
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -14,10 +13,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class DataRepository @Inject constructor() :Repository {
-
-    @Inject lateinit var apolloClient: ApolloClient
-    @Inject lateinit var restClient: RestClient
+class DataRepository @Inject constructor(var retrofitClient: RestApi, var apolloClient: ApolloClient) : Repository {
 
     override fun getGitRepos(naber: Int): Observable<Response<GitReposQuery.Data>> {
         val entryDetailQuery = apolloClient.query(GitReposQuery(naber))
@@ -28,8 +24,8 @@ class DataRepository @Inject constructor() :Repository {
             .observeOn(AndroidSchedulers.mainThread())
     }
 
-    override fun getGitRepos(): Single<List<Repository>> {
-        return restClient.restApi.getRepos()
+    override fun getGitRepos(): Single<List<Repo>> {
+        return retrofitClient.getRepos()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
     }

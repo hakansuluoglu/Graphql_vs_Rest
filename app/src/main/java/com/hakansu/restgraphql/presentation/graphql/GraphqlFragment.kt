@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import butterknife.ButterKnife
 import com.hakansu.restgraphql.R
-import com.hakansu.restgraphql.app.App
+import com.hakansu.restgraphql.App
 import javax.inject.Inject
 
-open class GraphqlFragment : Fragment(){
+open class GraphqlFragment  : Fragment(){
 
     @Inject
     lateinit var graphqlPresenter: GraphqlPresenter

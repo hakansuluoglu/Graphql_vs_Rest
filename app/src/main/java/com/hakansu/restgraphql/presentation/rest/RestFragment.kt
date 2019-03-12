@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import butterknife.ButterKnife
 import com.hakansu.restgraphql.R
-import com.hakansu.restgraphql.app.App
+import com.hakansu.restgraphql.App
 import com.hakansu.restgraphql.presentation.both.RestPresenter
 import javax.inject.Inject
 
