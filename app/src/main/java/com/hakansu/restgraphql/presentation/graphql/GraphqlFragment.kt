@@ -23,7 +23,7 @@ open class GraphqlFragment  : Fragment(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        App.applicationComponent.inject(this)
+        App.appComponent.inject(this)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -33,7 +33,7 @@ open class GraphqlFragment  : Fragment(){
         return rootView
     }
 
-    fun naber(){
+    fun naber() {
         graphqlPresenter.calis()
     }
 

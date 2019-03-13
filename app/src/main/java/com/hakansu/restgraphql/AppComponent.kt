@@ -6,8 +6,8 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [ApplicationModule::class])
-interface ApplicationComponent {
+@Component(modules = [AppModule::class])
+interface AppComponent {
 
     fun inject(graphqlFragment: GraphqlFragment)
     fun inject(restFragment: RestFragment)

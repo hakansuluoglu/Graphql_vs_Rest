@@ -1,18 +1,18 @@
 package com.hakansu.restgraphql
 
 import android.app.Application
-import com.hakansu.restgraphql.di.DaggerApplicationComponent
+import com.hakansu.restgraphql.di.DaggerAppComponent
 
 class App : Application() {
 
     companion object {
-        lateinit var applicationComponent: ApplicationComponent
+        lateinit var appComponent: AppComponent
     }
 
     override fun onCreate() {
         super.onCreate()
-        applicationComponent = DaggerApplicationComponent.builder()
-            .applicationModule(ApplicationModule(this))
+        appComponent = DaggerAppComponent.builder()
+            .applicationModule(AppModule(this))
             .build()
     }
 }
