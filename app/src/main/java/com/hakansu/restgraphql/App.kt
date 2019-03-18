@@ -1,7 +1,6 @@
 package com.hakansu.restgraphql
 
 import android.app.Application
-import com.hakansu.restgraphql.di.DaggerAppComponent
 
 class App : Application() {
 
@@ -12,7 +11,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         appComponent = DaggerAppComponent.builder()
-            .applicationModule(AppModule(this))
+            .appModule(AppModule(this))
             .build()
     }
 }

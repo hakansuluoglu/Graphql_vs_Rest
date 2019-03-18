@@ -8,7 +8,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import javax.inject.Inject
 
-class GraphqlPresenter @Inject constructor(var repository: Repository) {
+class GraphqlPresenter @Inject constructor(var repository: Repository) : GraphqlContact{
 
     var disposable = CompositeDisposable()
 

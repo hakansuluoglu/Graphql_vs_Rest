@@ -1,3 +1,6 @@
 package com.hakansu.restgraphql.presentation.graphql
 
-interface GraphqlContact
+interface GraphqlContact{
+
+    //fun naber()
+}
