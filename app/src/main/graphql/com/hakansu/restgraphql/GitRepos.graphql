@@ -3,9 +3,13 @@ query GitRepos($number_of_repos:Int!) {
     name
      repositories(last: $number_of_repos) {
        nodes {
-         name
-         description
+         ...RepositoryFragment
        }
      }
    }
+}
+
+fragment RepositoryFragment on Repository {
+    name
+    description
 }

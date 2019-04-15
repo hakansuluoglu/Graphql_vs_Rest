@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
 
         val graphqlFragment = GraphqlFragment.newInstance()
         val restFragment = RestFragment.newInstance()
-        //putFragment(graphqlFragment, graphqlFragment.javaClass.simpleName, false)
-        putFragment(restFragment, restFragment.javaClass.simpleName, false)
+        putFragment(graphqlFragment, graphqlFragment.javaClass.simpleName, false)
+        //putFragment(restFragment, restFragment.javaClass.simpleName, false)
     }
 
 

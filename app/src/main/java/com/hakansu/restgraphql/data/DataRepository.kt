@@ -16,7 +16,12 @@ import javax.inject.Singleton
 class DataRepository @Inject constructor(var retrofitClient: RestApi, var apolloClient: ApolloClient) : Repository {
 
     override fun getGitRepos(naber: Int): Observable<Response<GitReposQuery.Data>> {
-        val entryDetailQuery = apolloClient.query(GitReposQuery(naber))
+        val entryDetailQuery =
+            apolloClient
+                .query(GitReposQuery
+                    .builder()
+                    .number_of_repos(naber)
+                    .build())
 
         return Rx2Apollo
             .from(entryDetailQuery)

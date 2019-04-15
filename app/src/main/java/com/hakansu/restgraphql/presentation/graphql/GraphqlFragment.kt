@@ -37,5 +37,6 @@ open class GraphqlFragment  : Fragment(){
         graphqlPresenter.calis()
     }
 
+
 }
 
