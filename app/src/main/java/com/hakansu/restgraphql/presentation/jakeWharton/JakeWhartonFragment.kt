@@ -1,4 +1,4 @@
-package com.hakansu.restgraphql.presentation.rest
+package com.hakansu.restgraphql.presentation.jakeWharton
 
 import android.os.Bundle
 import android.view.LayoutInflater

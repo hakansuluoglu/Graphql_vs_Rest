@@ -1,6 +1,6 @@
 package com.hakansu.restgraphql
 
-import com.hakansu.restgraphql.presentation.rest.JakeWhartonFragment
+import com.hakansu.restgraphql.presentation.jakeWharton.JakeWhartonFragment
 import dagger.Component
 import javax.inject.Singleton
 
