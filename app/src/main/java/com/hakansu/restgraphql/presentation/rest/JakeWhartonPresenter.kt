@@ -1,4 +1,4 @@
-package com.hakansu.restgraphql.presentation.graphql
+package com.hakansu.restgraphql.presentation.both
 
 import android.util.Log
 import com.apollographql.apollo.api.Response
@@ -10,18 +10,36 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import javax.inject.Inject
 
-class GraphqlPresenter @Inject constructor(var repository: Repository) : GraphqlContact{
+class JakeWhartonPresenter @Inject constructor(var repository: Repository) {
 
     var disposable = CompositeDisposable()
 
-    fun calis(){
-        disposable.add(repository
-                        .getGitRepos(3)
-                        .singleOrError()
-                        .subscribeWith(GetContentsObserver()))
+    fun calis() {
+        disposable.add(repository.getGitRepos().subscribeWith(GetContentsObserverRest()))
     }
 
-    private inner class GetContentsObserver : DisposableSingleObserver<Response<GitReposQuery.Data>>() {
+
+
+    fun calisGraphql(){
+        disposable.add(repository
+            .getGitRepos(3)
+            .singleOrError()
+            .subscribeWith(GetContentsObserverGraphql()))
+    }
+
+    private inner class GetContentsObserverRest : DisposableSingleObserver<List<Repo>>() {
+
+        override fun onSuccess(t: List<Repo>) {
+            Log.d("HATA", t.get(0).description)
+        }
+
+
+        override fun onError(e: Throwable) {
+            Log.d("HATA", e.localizedMessage)
+        }
+    }
+
+    private inner class GetContentsObserverGraphql : DisposableSingleObserver<Response<GitReposQuery.Data>>() {
         override fun onSuccess(t: Response<GitReposQuery.Data>) {
             Log.d("HATA", mapResponseToRepositories(t).get(0).description())
 
@@ -36,6 +54,4 @@ class GraphqlPresenter @Inject constructor(var repository: Repository) : Graphql
         return response.data()?.viewer()?.repositories()?.nodes()?.map{it.fragments().repositoryFragment()} ?: emptyList()
     }
 
-
 }
-

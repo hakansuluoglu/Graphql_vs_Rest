@@ -8,17 +8,17 @@ import androidx.fragment.app.Fragment
 import butterknife.ButterKnife
 import com.hakansu.restgraphql.R
 import com.hakansu.restgraphql.App
-import com.hakansu.restgraphql.presentation.both.RestPresenter
+import com.hakansu.restgraphql.presentation.both.JakeWhartonPresenter
 import javax.inject.Inject
 
-class RestFragment : Fragment(){
+class JakeWhartonFragment : Fragment(){
 
     @Inject
-    lateinit var restPresenter: RestPresenter
+    lateinit var jakeWhartonPresenter: JakeWhartonPresenter
 
     companion object {
-        fun newInstance(): RestFragment {
-            return RestFragment()
+        fun newInstance(): JakeWhartonFragment {
+            return JakeWhartonFragment()
         }
     }
 
@@ -35,7 +35,8 @@ class RestFragment : Fragment(){
     }
 
     fun naber(){
-        restPresenter.calis()
+        jakeWhartonPresenter.calis()
+        jakeWhartonPresenter.calisGraphql()
     }
 }
 
