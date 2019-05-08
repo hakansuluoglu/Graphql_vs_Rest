@@ -1,5 +1,6 @@
 package com.hakansu.restgraphql
 
+import com.hakansu.restgraphql.presentation.florinaMuntanescu.FlorinaMuntanescuFragment
 import com.hakansu.restgraphql.presentation.jakeWharton.JakeWhartonFragment
 import dagger.Component
 import javax.inject.Singleton
@@ -9,5 +10,6 @@ import javax.inject.Singleton
 interface AppComponent {
 
     fun inject(jakeWhartonFragment: JakeWhartonFragment)
+    fun inject(florinaMuntanescuFragment: FlorinaMuntanescuFragment)
 
 }
