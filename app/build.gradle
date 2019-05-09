@@ -66,4 +66,9 @@ dependencies {
 
     implementation 'com.apollographql.apollo:apollo-runtime:1.0.0-alpha5'
     implementation 'com.apollographql.apollo:apollo-rx2-support:1.0.0-alpha5'
+
+
+    //Compilation error_ cannot find symbol @Generated(_Apollo GraphQL_) ^ symbol_ class Generated · Issue #1201 · apollographql_apollo-android
+    //https://github.com/apollographql/apollo-android/issues/1201
+    compileOnly 'javax.annotation:jsr250-api:1.0'
 }

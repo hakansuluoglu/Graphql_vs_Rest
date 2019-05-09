@@ -8,8 +8,6 @@ import androidx.fragment.app.Fragment
 import butterknife.ButterKnife
 import com.hakansu.restgraphql.R
 import com.hakansu.restgraphql.App
-import com.hakansu.restgraphql.presentation.both.JakeWhartonPresenter
-import com.hakansu.restgraphql.presentation.both.SearchUserPresenter
 import javax.inject.Inject
 
 class SearchUserFragment : Fragment(){
