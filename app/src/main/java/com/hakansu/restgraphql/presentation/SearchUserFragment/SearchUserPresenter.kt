@@ -29,23 +29,23 @@ class SearchUserPresenter @Inject constructor(var repository: Repository) {
     private inner class GetContentsObserverRest : DisposableSingleObserver<List<Repo>>() {
 
         override fun onSuccess(t: List<Repo>) {
-            Log.d("AY", t.get(0).description)
+            Log.d("REST", t.get(0).description)
         }
 
 
         override fun onError(e: Throwable) {
-            Log.d("AY", e.localizedMessage)
+            Log.d("REST", e.localizedMessage)
         }
     }
 
     private inner class GetContentsObserverGraphql : DisposableSingleObserver<Response<GitReposQuery.Data>>() {
         override fun onSuccess(t: Response<GitReposQuery.Data>) {
-            Log.d("AY", mapResponseToRepositories(t).get(0).description())
+            Log.d("GRAPHQL", mapResponseToRepositories(t).get(0).name())
 
         }
 
         override fun onError(e: Throwable) {
-            Log.d("AY", e.localizedMessage)
+            Log.d("REST", e.localizedMessage)
         }
     }
 
