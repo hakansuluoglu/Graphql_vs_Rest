@@ -10,7 +10,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import javax.inject.Inject
 
-class FlorinaMuntanescuPresenter @Inject constructor(var repository: Repository) {
+class SearchUserPresenter @Inject constructor(var repository: Repository) {
 
     var disposable = CompositeDisposable()
 

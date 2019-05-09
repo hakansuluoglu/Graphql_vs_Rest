@@ -1,4 +1,4 @@
-package com.hakansu.restgraphql.presentation.florinaMuntanescu
+package com.hakansu.restgraphql.presentation.SearchUserFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,18 +8,18 @@ import androidx.fragment.app.Fragment
 import butterknife.ButterKnife
 import com.hakansu.restgraphql.R
 import com.hakansu.restgraphql.App
-import com.hakansu.restgraphql.presentation.both.FlorinaMuntanescuPresenter
 import com.hakansu.restgraphql.presentation.both.JakeWhartonPresenter
+import com.hakansu.restgraphql.presentation.both.SearchUserPresenter
 import javax.inject.Inject
 
-class FlorinaMuntanescuFragment : Fragment(){
+class SearchUserFragment : Fragment(){
 
     @Inject
-    lateinit var jakeWhartonPresenter: FlorinaMuntanescuPresenter
+    lateinit var searchUserPresenter: SearchUserPresenter
 
     companion object {
-        fun newInstance(): FlorinaMuntanescuFragment {
-            return FlorinaMuntanescuFragment()
+        fun newInstance(): SearchUserFragment {
+            return SearchUserFragment()
         }
     }
 
@@ -36,8 +36,8 @@ class FlorinaMuntanescuFragment : Fragment(){
     }
 
     fun naber(){
-        jakeWhartonPresenter.calis()
-        jakeWhartonPresenter.calisGraphql()
+        searchUserPresenter.calis()
+        searchUserPresenter.calisGraphql()
     }
 }
 

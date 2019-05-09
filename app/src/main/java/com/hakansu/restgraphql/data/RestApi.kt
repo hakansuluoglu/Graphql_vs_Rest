@@ -9,4 +9,6 @@ interface RestApi {
     @GET("/user/repos")
     fun getRepos(): Single<List<Repo>>
 
+    @GET("/search")
+    fun searchUser():Single<List<Repo>>
 }

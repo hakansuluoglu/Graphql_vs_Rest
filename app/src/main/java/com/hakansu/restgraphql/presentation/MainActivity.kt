@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.hakansu.restgraphql.R
-import com.hakansu.restgraphql.presentation.jakeWharton.JakeWhartonFragment
+import com.hakansu.restgraphql.presentation.SearchUserFragment.SearchUserFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,8 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val jakeWhartonFragment = JakeWhartonFragment.newInstance()
-        putFragment(jakeWhartonFragment, jakeWhartonFragment.javaClass.simpleName, false)
+        val searchUserFragment = SearchUserFragment.newInstance()
+        putFragment(searchUserFragment, searchUserFragment.javaClass.simpleName, false)
     }
 
 
