@@ -1,6 +1,6 @@
 package com.hakansu.restgraphql
 
-import com.hakansu.restgraphql.presentation.SearchUserFragment.SearchUserFragment
+import com.hakansu.restgraphql.presentation.searchUserFragment.SearchUserFragment
 import dagger.Component
 import javax.inject.Singleton
 
