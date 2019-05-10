@@ -6,14 +6,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".presentation.splash.SplashActivity"
-        android:background="@drawable/akp">
+        android:background="#000">
     
-    <androidx.constraintlayout.widget.Guideline
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/guideline"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5013193"/>
     <androidx.constraintlayout.widget.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,43 +15,25 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.43"/>
     <TextView
-            android:text="Graphql"
-            android:layout_width="wrap_content"
-            android:layout_height="19dp"
-            android:id="@+id/textView"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toTopOf="@+id/guideline2"
-            android:layout_marginEnd="32dp"
-            android:layout_marginTop="32dp"
-            app:layout_constraintEnd_toStartOf="@+id/guideline" android:layout_marginStart="32dp"
-            app:layout_constraintStart_toStartOf="parent"/>
-    <TextView
-            android:text="Rest"
-            android:layout_width="wrap_content"
-            android:layout_height="19dp"
-            android:id="@+id/textView2"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toTopOf="@+id/guideline2"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            android:layout_marginStart="32dp" android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"/>
-    
-    <com.airbnb.lottie.LottieAnimationView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@+id/button"
-            android:layout_marginEnd="8dp"
-            app:lottie_rawRes="@raw/flow"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:layout_constraintStart_toStartOf="@+id/button"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/button"/>
+            android:id="@+id/textView"
+            android:textSize="14sp"
+            android:fontFamily="@font/source_code"
+            android:textColor="@color/commandline"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="32dp"/>
     <Button
             android:text="GET STARTED"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/button"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            android:animateLayoutChanges="true"
             android:textColor="@color/colorPrimaryDark"
             android:background="@drawable/shape_radius_background"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,12 +45,4 @@
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="@+id/guideline2"
             app:layout_constraintVertical_bias="0.77"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_battle"
-            android:id="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/textView" app:layout_constraintStart_toStartOf="@+id/guideline"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#102027</color>
     <color name="colorAccent">#D81B60</color>
     <color name="white">#ffff</color>
+    <color name="commandline">#64dd17</color>
 </resources>
