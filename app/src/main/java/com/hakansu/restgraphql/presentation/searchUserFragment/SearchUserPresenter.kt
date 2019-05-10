@@ -1,4 +1,4 @@
-package com.hakansu.restgraphql.presentation.SearchUserFragment
+package com.hakansu.restgraphql.presentation.searchUserFragment
 
 import android.util.Log
 import com.apollographql.apollo.api.Response

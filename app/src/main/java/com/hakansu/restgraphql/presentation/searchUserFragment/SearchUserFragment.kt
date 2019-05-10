@@ -1,4 +1,4 @@
-package com.hakansu.restgraphql.presentation.SearchUserFragment
+package com.hakansu.restgraphql.presentation.searchUserFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
