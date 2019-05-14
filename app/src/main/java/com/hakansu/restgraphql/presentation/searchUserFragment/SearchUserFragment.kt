@@ -35,5 +35,6 @@ class SearchUserFragment : Fragment(){
         searchUserPresenter.calis()
         searchUserPresenter.calisGraphql()
     }
+
 }
 
