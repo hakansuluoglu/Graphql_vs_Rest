@@ -40,7 +40,7 @@ class AppModule(private val application: App) {
             val original = chain.request()
             val requestBuilder: Request.Builder
             requestBuilder = original.newBuilder()
-                .addHeader("Authorization","bearer 7096370eb8647c5a8b9edff3748ad0b9d614e8f5")
+                .addHeader("Authorization","bearer")
             val request = requestBuilder.build()
             chain.proceed(request)
         }
